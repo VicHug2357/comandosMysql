@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>reveal.js</title>
+
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/black.css">
+
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    </head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-transition="zoom-in" class="bgtheme2">
+                <h2 class="subth2">¿Qué son las Claves ajenas?</h2>
+                <div class="text-theme">
+                    <p>Las claves ajenas son elementos en una base de datos que establecen relaciones entre tablas al referenciar una clave única en otra tabla. Estas relaciones aseguran la consistencia de los datos entre las tablas y mantienen la integridad referencial del sistema.</p>
+                    
+                </div>
+            </section>
+            <section id="subtheme1" class="bgtheme2">
+                <div class="text-theme" data-transition="fade-out">
+                    <h2 class="subth2">¿Como se crean?:</h2>
+                    <img src="images/CrearAjenas.png">
+                </div>	
+            </section>
+            <section id="subtheme1" class="bgtheme2">
+                <div class="text-theme" data-transition="fade-out">
+                    <h2 class="subth2">Ejemplo usando tablas InnoDB:</h2>
+                    <img src="images/tablaINNODB.png">
+                </div>	
+            </section>
+            <section id="subtheme2" class="bgtheme2">
+                <div class="text-theme" data-transition="fade-out">
+                    <p>Esta forma define una clave foránea en la columna 'id', que hace referencia a la columna 'id' de la tabla 'personas'. La definición incluye las tareas a realizar en el caso de que se elimine una fila en la tabla 'personas'.</p>
+                    
+                </div>	
+            </section>
+            <section id="subtheme2" class="bgtheme2">
+                <div class="text-theme" data-transition="fade-out">
+                    <p>ON DELETE (opción), indica que acciones se deben realizar en la tabla actual si se borra una fila en la tabla referenciada.</p>
+                    <p></p>
+                    <p>ON UPDATE (opción), es análogo pero para modificaciones de claves.</p>
+                    
+                </div>	
+            </section>
+            <section id="subtheme3" class="bgtheme2">
+                <div class="text-theme" data-transition="fade-out">
+                    <h2 class="subth2">Existen cinco opciones diferentes.</h2>
+                </div>	
+            </section>
+            <section id="subtheme3" class="bgtheme2">
+                <div class="text-theme" data-transition="fade-out">
+                    <img src="images/9XBNN.png" style="width: 100%;">
+                </div>	
+            </section>
+            <section id="subtheme3" class="bgtheme2">
+                <div class="text-theme" data-transition="fade-out">
+                    <p><p style="color: lightcoral; font-size: 40px;">RESTRICT: </p>
+                    <p>Esta opción impide eliminar o modificar filas en la tabla referenciada si existen filas con el mismo valor de clave ajena.</p>
+                    <img src="images/RESTRICT.png" style="width: 65%;">
+                </div>	
+            </section>
+            <section id="subtheme3" class="bgtheme2">
+                <div class="text-theme" data-transition="fade-out">
+                    <p><p style="color: lightcoral; font-size: 40px;">CASCADE: </p>
+                    <p>Borrar o modificar una clave en una fila en la tabla referenciada con un valor determinado de clave, implica borrar las filas con el mismo valor de clave ajena o modificar los valores de esas claves ajenas.</p>
+                    <img src="images/CASCADE.png" style="width: 50%;">
+                </div>	
+            </section>
+            <section id="subtheme3" class="bgtheme2">
+                <div class="text-theme" data-transition="fade-out">
+                    <p><p style="color: lightcoral; font-size: 40px;">SET NULL:</p>
+                    <p>Borrar o modificar una clave en una fila en la tabla referenciada con un valor determinado de clave, implica asignar el valor NULL a las claves ajenas con el mismo valor.</p>
+                    <img src="images/SETNULL.png" style="width: 50%;">
+                </div>	
+            </section>
+            <section id="subtheme3" class="bgtheme2">
+                <div class="text-theme" data-transition="fade-out">
+                    <p><p style="color: lightcoral; font-size: 40px;">NO ACTION:</p>
+                    <p>Las claves ajenas no se modifican, ni se eliminan filas en la tabla que las contiene.</p>
+                    <P>En MySQL funciona igual que RESTRICT</P>
+                </div>	
+            </section>
+            <section id="subtheme3" class="bgtheme2">
+                <div class="text-theme" data-transition="fade-out">
+                    <p><p style="color: lightcoral; font-size: 40px;">SET DEFAULT:</p>
+                    <p>Las claves ajenas no se modifican, ni se eliminan filas en la tabla que las contiene.</p>
+                </div>
+                <div class="text-theme"><a href="tema-ddl-dml.html#theme0"><img src="images/iconhome.webp" style="width: 10%;"></a></div>	
+            </section>
+            
+        </div>
+    </div>
+    </section>
+    <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+            });
+        </script>
+</body>
+</html>
