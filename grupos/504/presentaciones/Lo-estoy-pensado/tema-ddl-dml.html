@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Lo-estoy-pensado</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="zoom">
+					<h2>𝙈𝙊𝘿𝙄𝙁𝙄𝘾𝘼𝙍 𝙀𝙎𝙏𝙍𝙐𝘾𝙏𝙐𝙍𝘼 𝘿𝙀 𝙐𝙉𝘼 𝙏𝘼𝘽𝙇𝘼 𝙔 𝙄𝙉𝙎𝙀𝙍𝘾𝙄Ó𝙉 𝘿𝙀 𝙁𝙄𝙇𝘼𝙎</h2>
+					<h4> </h4>
+					<h4 class="fragment fade-up">Angel Manuel Ruiz Herrera</h4>
+					<h4 class="fragment fade-down">Diego Alexis Rodríguez Pérez</h4>
+					<h4 class="fragment fade-up">Diego Pérez Melo</h4>
+					
+				</section>
+
+				<section>
+					<section data-background="#553d2a">
+						<h2>"𝙈𝙊𝘿𝙄𝙁𝙄𝘾𝘼𝙍 𝙀𝙎𝙏𝙍𝙐𝘾𝙏𝙐𝙍𝘼 𝘿𝙀 𝙐𝙉𝘼 𝙏𝘼𝘽𝙇𝘼"</h2>
+						<h5>Para modificar una tabla podemos usar el comando ALTER TABLE</h5>
+					</section>
+				</section>
+				<section data-transition="zoom-in fade-out">
+					<section data-background="#553d2a">
+						<h3>COMANDOS</h3>
+						<ul>
+							<li class="fragment fade-left">ALTER TABLE - RENAME</li>
+							<li class="fragment fade-right">ALTER TABLE - DROP COLUMN</li>
+							<li class="fragment fade-left">ALTER TABLE - DROP PRIMARY KEY</li>
+							<li class="fragment fade-right">ALTER TABLE - ADD</li>
+							<li class="fragment fade-right">ALTER TABLE - ADD - AFTER</li>
+							<li class="fragment fade-right">ALTER TABLE - ADD - FIRST</li>
+							<li class="fragment fade-right">ALTER TABLE - ADD - PRIMARY KEY</li>
+							<li class="fragment fade-right">ALTER TABLE - MODIFY COLUMN</li>
+						</ul>
+					</section>
+					
+						
+						
+				</section>
+				<section>
+					<section id= "simbols" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+						<div class="r-hstack justify-center">
+							<div data-id="box1" data-auto-animate-delay="0" style="background: white; width: 175px; height: 60px; margin: 10px;"><a href="#/selec">(RENAME)</a></div>
+							<div data-id="box2" data-auto-animate-delay="0.1" style="background: white; width: 175px; height: 60px; margin: 10px;"><a href="#/proyec">(COLUMN)</a></div>
+							<div data-id="box3" data-auto-animate-delay="0.2" style="background: white; width: 250px; height: 60px; margin: 10px;"><a href="#/uni">(PRIMARYKEY)</a></div>
+							<div data-id="box4" data-auto-animate-delay="0.3" style="background: white; width: 175px; height: 60px; margin: 10px;"><a href="#/inter">(ADD)</a></div>
+						</div>
+					</section>
+					<section id="selec">
+						<h1></h1>
+						<h3>ALTER TABLE - RENAME</h3>
+						<p>Por ejemplo, si queremos cambiar el nombre de la tabla: 
+							mysql>ALTER TABLE (nombre) RENAME (nuevo nombre); 
+							</p>
+						<h3></h3>
+						<a href="#/simbols">volver</a>
+					</section>
+					<section id="proyec">
+						<h1></h1>
+						<h3>ALTER TABLE - DROP COLUMN</h3>
+						<p>Para eliminar una columna de una tabla: 
+							mysql>ALTER TABLE(nombre de la tabla) DROP COLUMN (nombre de la columna);</p>
+						<h3></h3>
+						<a href="#/simbols">volver</a>
+					</section>
+					<section id="uni">
+						<h1></h1>
+						<h3>ALTER TABLE - DROP PRIMARY KEY</h3>
+						<p>Para eliminar la clave primaria de una columna: 
+							mysql>ALTER TABLE (clave primaria) DROP PRIMARY KEY; 
+							</p>
+						<h3></h3>
+						<a href="#/simbols">volver</a>
+					</section>
+	
+					<section id="inter">
+						<h1></h1>
+						<h3>ALTER TABLE - ADD</h3>
+						<p>Para insertar una nueva columna al final de una tabla: 
+							mysql>ALTER TABLE (nombre de la tabla) ADD (nueva columna); 
+							.</p>
+						<h3></h3>
+						<a href="#/simbols">volver</a>
+					</section>
+				</section>
+				<section>
+					<section id= "simbols2" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+						<div class="r-hstack justify-center">
+							<div data-id="box1" data-auto-animate-delay="0" style="background: white; width: 175px; height: 120px; margin: 10px;"><a href="#/dif">(ADD AFTER)</a></div>
+							<div data-id="box2" data-auto-animate-delay="0" style="background: white; width: 175px; height: 120px; margin: 10px;"><a href="#/produ">(ADD FIRST)</a></div>
+							<div data-id="box3" data-auto-animate-delay="0" style="background: white; width: 175px; height: 155Px; margin: 10px;"><a href="#/join">(ADD PRIMARY KEY)</a></div>
+							<div data-id="box4" data-auto-animate-delay="0" style="background: white; width: 175px; height: 120px; margin: 10px;"><a href="#/divis">(MODIFY COLUMN)</a></div>
+						</div>
+					</section>
+					<section id="dif">
+						<h1></h1>
+						<h3>ALTER TABLE - ADD - AFTER</h3>
+						<p>Para añadir una nueva columna después de otra: 
+							mysql>ALTER TABLE (nombre de la tabla) ADD (columna) (tipo de dato) AFTER (columna nueva);</p>
+						<h3></h3>
+						<a href="#/simbols2">volver</a>
+					</section>
+					<section id="produ">
+						<h1></h1>
+						<h3>ALTER TABLE - ADD - FIRST</h3>
+						<p>Para añadir una nueva columna en la primera posición de la tabla: 
+							mysql>ALTER TABLE (nombre de la tabla) ADD (columna) (tipo de dato) FIRST; </p>
+						<h3></h3>
+						<a href="#/simbols2">volver</a>
+					</section>
+					<section id="join">
+						<h1></h1>
+						<h3>ALTER TABLE - ADD - PRIMARY KEY</h3>
+						<p>Asignar como clave primaria a una columna: 
+							mysql>ALTER TABLE (nombre de la tabla) ADD PRIMARY KEY(nombre); </p>
+						<h3></h3>
+						<a href="#/simbols2">volver</a>
+					</section>
+	
+					<section id="divis">
+						<h1></h1>
+						<h3>DALTER TABLE - MODIFY COLUMN</h3>
+						<p>También podemos reestructurar una columna: 
+							mysql>ALTER TABLE (nombre de la tabla) MODIFY COLUMN (columna) (tipo de dato) (propiedad de una columna); </p>
+						<h3></h3>
+						<a href="#/simbols2">volver</a>
+					</section>
+				</section>
+				<section data-transition="convex-in concave-out">
+					<section data-background="#553d2a">
+						<h2>𝙄𝙉𝙎𝙀𝙍𝘾𝙄Ó𝙉 𝘿𝙀 𝙁𝙄𝙇𝘼𝙎</h2>
+					<h6>La forma más directa de insertar una fila nueva en una tabla es mediante una sentencia INSERT.  En la forma más simple de esta sentencia debemos indicar la tabla a la que queremos añadir filas, y los valores de cada columna.  </h6>
+					</section>
+					
+					
+				</section>
+				</section>
+				<section data-transition="concave">
+					<section data-background="#553d2a">
+						<h2>EJEMPLO 1</h2>
+					<h2></h2>
+					<h6>mysql>INSERT INTO (nombre de la tabla) VALUES ((atributo), (atributo), (atributo));   </h6>
+					</section>
+					<section id="ej2">
+						<h4>Introducir más de una fila a la vez:</h4>
+						<h6></h6>
+						<h8>mysql>INSERT INTO (nombre de la tabla) VALUES 
+							→ ((atributos)), 
+							→(atributos);</h8>
+					</section>
+					<section id="enmas">
+						<p>Configure dominios de datos para agrupar columnas de origen de datos para el enmascaramiento de datos.</p>
+						<p><a href="#/ej2">regresar</a></p>
+					</section>	
+				</section>
+				
+				</section>
+				<section data-transition="convex-in fade-out">
+				<section data-background="#553d2a">
+				<h2></h2>
+				<h4>También es posible especificar la lista de columnas/atributos donde deseamos ingresar ciertos  valores.</h4>
+				<h5></h5>
+				<h6>mysql>INSERT INTO granciudad (nombre de la(s) columnas) VALUES (atributos); </h6>
+					</section>	
+
+
+				</section>
+				<section data-transition="convex-in fade-out">
+				<section data-background="#553d2a">
+				<h4>Además existe una alternativa que consiste en indicar un valor para cada columna: </h4>
+				<h6>mysql>INSERT INTO (nombre de la tabla) SET 
+					<h5></h5>
+					(columna) = (atributo), 
+					(columna) = (atributo); 				   
+					<h6></h6>
+					</section>
+				
+				</section>
+			</section>
+
+
+				</section>
+
+					
+					
+				</section>
+				
+				</section>
+				<section>
+				  <h1>_GRACIAS_</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

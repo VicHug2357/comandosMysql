@@ -1,40 +1,55 @@
 <!doctype html>
 <html lang="en">
+
 	<head>
 		<meta charset="utf-8">
+
+		<title>Grupos 503 - 504</title>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
-
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
-
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/monokai.css">
 	</head>
+
 	<body>
+
 		<div class="reveal">
+
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h3>presentación grupos</h3>
+					
+					<section id="stacked-slide-1" data-auto-animate>
+						<a href="./grupos/grupo504.html"></a><br>
+						
+						<a href="#"></a><br>
+						<div data-id="anim" style="background: indigo; padding: 8px; width: 50px; height: 50px; position: absolute; left: 0px;"><a href="#"><img src="../img/toroups-1.png" alt="toroUPT"></a>503</div>
+					</section>
+					
+					<section id="stacked-slide-4" data-auto-animate>
+						<a href="#"></a><br>
+						
+						<a href="./grupos/grupo504.html"></a><br>
+						<div data-id="anim" style="background: indigo; padding: 8px; width: 50px; height: 50px; position: absolute; left: 75%;"><a href="./grupos/grupo504.html"><img src="../img/toroups-1.png" alt="toroUPT"></a>504</div>
+					</section>
+					
+				</section>
+				<img src="../img/toroups-1.png" alt="toroUPT">
 			</div>
+
 		</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
 			Reveal.initialize({
+				center: true,
 				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealHighlight ]
 			});
 		</script>
+
 	</body>
 </html>

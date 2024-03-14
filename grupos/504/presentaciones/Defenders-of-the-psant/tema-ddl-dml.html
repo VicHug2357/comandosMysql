@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reemplazar y Actualizar Filas en MySQL</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/white.css" id="theme">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3 {
+      color: #000000;
+    }
+
+    .reveal p {
+      color: #494949;
+    }
+
+    .reveal pre {
+      background-color: #f8f8f8;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .reveal code {
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-transition="fade">
+        <h1 style="text-align:center;">Reemplazar y Actualizar Filas en MySQL</h1>
+      </section>
+      <section data-transition="fade">
+        <h2>Reemplazar Filas</h2>
+        <p>En MySQL, reemplazar filas se refiere a la acción de insertar nuevos registros en una tabla o actualizar registros existentes si ya hay una coincidencia basada en una clave única.</p>
+      </section>
+      <section data-transition="fade">
+        <h3>Ejemplo de Reemplazar Filas</h3>
+        <p>Supongamos que tienes una tabla llamada <code>clientes</code> con las columnas <code>id</code>, <code>nombre</code> y <code>email</code>, donde <code>id</code> es una clave única. Si deseas agregar un nuevo cliente o reemplazar uno existente con el ID 1, puedes usar la siguiente consulta:</p>
+        <pre><code class="sql">REPLACE INTO clientes (id, nombre, email)
+VALUES (1, 'Juan Pérez', 'juan@example.com');</code></pre>
+      </section>
+      <section data-transition="fade">
+        <h2>Actualizar Filas</h2>
+        <p>La actualización de filas en MySQL se utiliza para cambiar los valores de una o varias columnas en una o varias filas de una tabla.</p>
+      </section>
+      <section data-transition="fade">
+        <h3>Ejemplo de Actualizar Filas</h3>
+        <p>Supongamos que tienes una tabla llamada <code>empleados</code> con las columnas <code>id</code>, <code>nombre</code>, <code>salario</code> y <code>departamento</code>. Si deseas aumentar el salario de todos los empleados en el departamento de "Ventas" en un 10%, puedes hacerlo con la siguiente consulta:</p>
+        <pre><code class="sql">UPDATE empleados
+SET salario = salario * 1.1
+WHERE departamento = 'Ventas';</code></pre>
+      </section>
+     
+      <section class="fragment" data-transition="fade">
+        <h1 style="text-align:center;">¡Gracias!</h1>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js"></script>
+  <script>
+    Reveal.initialize();
+  </script>
+</body>
+</html>
