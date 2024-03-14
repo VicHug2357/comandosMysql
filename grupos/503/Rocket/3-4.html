@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Manual de Comandos</title>
+    <!-- Enlaces a los estilos CSS -->
+    <link rel="stylesheet" href="../../../dist/reset.css">
+    <link rel="stylesheet" href="../../../dist/reveal.css">
+    <link rel="stylesheet" href="../../../dist/theme/mydesing.css">
+    <!-- Tema utilizado para resaltar la sintaxis del código -->
+    <link rel="stylesheet" href="../../../plugin/highlight/monokai.css">
+</head>
+<body>
+    <!-- Contenedor principal de la presentación -->
+    <div class="reveal">
+        <!-- Contenedor de diapositivas -->
+        <div class="slides">
+            <!-- Diapositiva 1 y 2 ese es el ejemplo de como va a ir a informacion -->
+            <!-- Va ir dentro de las etiquetas section -->
+            <!-- Y la propiedad de data transition va a ir una diapositiva si y un una no  -->
+            <!-- Añade más diapositivas según sea necesario -->
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <h3>Crear y Borrar tablas </h3><br>
+                <p align="left">Elaborado por:</p>
+                <p align="left"># Jesse Isaac Guerrero Jimenez</p>
+                <p align="left"># Luis Mario Maurio Jimenez</p>
+                <p align="left"># Omar Reyes Morales</p>
+                <p align="left"># Jazmin nuñez fernandez</p>
+                <p align="left"># Jorge nuñez fernandez</p>
+            </section>
+
+            <section data-transition="slide" data-background="#D32F2F" data-background-transition="zoom">
+                <h2>Índice</h2>
+                <ul>
+                CREAR UNA TABLA
+                    
+                    <li><a href="#slide2">Valores por defecto</a></li>
+                    <li><a href="#slide3">Claves primarias</a></li>
+                    <li><a href="#slide4">Claves primarias compuestas</a></li>
+                    <li><a href="#slide5">Columnas autoincrementadas</a></li>
+                    <li><a href="#slide6">Comentarios</a></li>
+                BORRAR UNA TABLA
+                </ul>
+            </section>
+            
+        <section>
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <h3>
+                    <font face="Luminari,fantasy">Claves primarias (Primary Key) </font>
+                    <img src="Recursos/Diapo 1 llave.png" height="80" width="100"></h3>
+                <p align="left">Una clave primaria (primary key) es un campo o conjunto de campos que identifica de forma única a cada fila de una tabla.</p>
+                <p><img src="Recursos/Diapo1 Ejemplo.jpg" height="200" width="600"></p>
+            </section>
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <h4>
+                    <font face="Luminari,fantasy"> Caracteristicas de las claves primarias(Primary Key) </font>
+                    <img src="Recursos/Diapo 1 llave.png" height="80" width="100"></h4>
+                <p align="left" style="font-size: 30px;"><b style="color:darkorange;">Unicidad:</b>  Cada fila de la tabla debe tener un valor único para la clave primaria.</p>
+                <p align="left" style="font-size: 30px;"><b style="color: darkorange;">Integridad:</b> Solo puede existir una clave primaria en cada tabla, y el atributo sobre el que se define una clave primaria NO puede tener valores NULL.</p>
+                <p align="left" style="font-size: 30px;"><b style="color: darkorange;">Identificación: </b> La clave primaria identifica de forma única cada fila de la tabla.</p>
+                <p align="left" style="font-size: 30px;"><b style="color: darkorange;">Indexación: </b> La clave primaria crea un índice en la tabla, lo que permite realizar búsquedas rápidas y eficientes.</p>
+            </section>
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <h3>
+                    <font face="Luminari,fantasy">Claves primarias simples</font>
+                    </h3>
+                <p align="left" >Es una clave primaria que está compuesta por una sola columna.</p>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div align="left">
+                      					  
+            </section>
+            <section data-auto-animate>
+                <h2 data-id="code-title">Ejemplo</h2>
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+                    CREATE TABLE usuarios (
+                       -> id INT(7) NOT NULL PRIMARY KEY,
+                       -> nombre VARCHAR(255),
+                       -> correo VARCHAR(255), 
+                      );
+                </code></pre>
+                <div>
+                    <img src="Recursos/Diapo 3 Ejemplo.png" alt="Imagen" width="900" height="230">
+                  </div>
+            </section>
+        </section>
+        <section>
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <h3>
+                    <font face="Cambria">Claves primarias compuestas</font>
+                </h3><br>
+                <p>Se usan cuando no hay ningun atributo en la tabla que identifique cada registro de manera unica. Es posible que un conjunto de atributos pueda identificar cada registro de manera unica.</p>
+                <img src="Recursos/Diapo 4 llave.png" height="180" width="400">
+            </section>
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <h3>
+                    <font face="Cambria">Claves primarias compuestas</font>
+                    </h3> <br>
+                <p align="left" >En MySQL para establecer que una tabla tenga una clave compuesta, lo indicamos al final del create table:</p>					  
+            </section>
+            <section data-auto-animate>
+                <h2 data-id="code-title">Ejemplo</h2>
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+                    CREATE TABLE vehiculos(
+                      -> patente CHAR(6) NOT NULL,
+                      -> tipo CHAR(4),
+                      -> horallegada TIME NOT NULL,
+                      -> horasalida TIME,
+                      -> PRIMARY KEY(patente,horallegada)
+                   );
+                </code></pre>
+
+                <div>
+                    <img src="Recursos/Diapo 5 Ejemplo.png" alt="Imagen" width="550" height="200">
+                  </div>
+            </section>
+            
+
+
+    </section>
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <h2>
+                    <font face="Luminari,fantasy">Columanas Autoincrementadas</font>
+                    </h2>
+            </section>
+        <section>
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <h2>
+                    <font face="Cambria">Tipo de Dato</font>
+                    </h2> <br>
+                <p>En MySQL, una columna autoincrementada debe ser de tipo entero, como INT</p>
+            </section>
+
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <h2>
+                    <font face="Cambria">Valor Predeterminado</font>
+                    </h2>
+                <p>
+                    Si al insertar una fila se omite el valor de una columna autoincrementada o se inserta un valor nulo para esa
+                    columna, MySQL calculará automáticamente el próximo valor asignando el valor más alto existente en esa columna y
+                    sumándole una unidad.
+                </p>
+            </section>
+    
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <h2>
+                    <font face="Cambria">Uso como Clave Primaria</font>
+                    </h2>
+                <p>
+                    Estas columnas suelen utilizarse como claves primarias 'artificiales', lo que significa que no representan datos
+                    significativos del mundo real, sino que existen solo con el propósito de identificar de forma única cada fila en
+                    la tabla.
+                </p>
+            </section>
+
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <h2>EJEMPLOS</h2>
+                <p>AUTO_INCREMENT</p>
+            </section>
+
+            <section>
+                <img src="Recursos\autoincremento_1.JPG" width="800" height="auto"">
+                <img src="Recursos\autoincremento_1.2.JPG" width="900" height="auto"">
+            </section>
+
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <img src="Recursos\autoincremento_2.JPG" width="800" height="auto"">
+                <img src="Recursos\autoincremento_2.2.JPG" width="900" height="auto"">
+            </section>
+        </section>
+        <section>
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <h2>
+                    <font face="Cambria">Comentarios</font>
+                    </h2>
+                <p>
+                    Al crear la tabla, podemos añadir un comentario a
+                    cada columna y sirve como información adicional sobre alguna
+                    característica especial, y entra en el apartado de documentación de la base
+                    de datos
+                </p>
+            </section>
+
+            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+                <h3>
+                    <font face="Cambria">COMMENT</font>
+                    </h3>
+                <img src="Recursos\comment.1.JPG" width="800" height="auto"">
+                <img src=" Recursos\comment.1.2.JPG" width="900" height="auto"">
+            </section>
+        </section>
+        <section>
+            <section data-auto-animate>
+                <h3>
+                    <font face="Luminari,fantasy">Borrar tablas</font>
+                    </h3> <br>
+                    <center> para borrar una tabla ocuparemos el comando </center>
+                    DROP TABLE <br>
+
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+                    DROP TABLE telef;
+                </code></pre>
+                
+            </section>
+        </section>
+            <section>
+                <a href="../../../presentaciones\grupo503.html"><lu>GRACIAS POR SU ATENCIÓN</lu></a>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script src="../../../dist/reveal.js"></script>
+    <!-- Plugins -->
+    <script src="../../../plugin/markdown/markdown.js"></script>
+    <script src="../../../plugin/highlight/highlight.js"></script>
+    <!-- Inicialización de la presentación -->
+    <script>
+        // Más información sobre la inicialización y la configuración:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            // Habilita el uso de enlaces hash para la navegación
+            hash: true,
+            // Plugins utilizados en la presentación
+            plugins: [ RevealMarkdown, RevealHighlight ]
+        });
+    </script>
+</body>
+</html>

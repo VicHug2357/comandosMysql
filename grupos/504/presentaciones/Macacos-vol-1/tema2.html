@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>reveal.js</title>
+
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/black.css">
+
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    </head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-transition="zoom-in" >
+                <h3><p style="color: #00c3ff;"></style> ¿Qué son los operadores? </h3>
+                <div class="text-theme">
+                    <p>Los operadores en bases de datos son símbolos o palabras clave que se utilizan para realizar operaciones específicas en los datos almacenados en la base de datos.</p>
+                    <p>Estas operaciones pueden incluir comparaciones, combinaciones, filtrado y manipulación de datos.</p> 
+                    <p>Los operadores se utilizan principalmente en consultas SQL (Structured Query Language) para recuperar información de la base de datos de acuerdo con ciertos criterios.</p>
+                </div>
+            </section>
+            <section>
+                <section data-transition="zoom-in">
+                    <h3><p style="color: #00c3ff;"></style> Asignación: </h3>
+                    <div class="text-theme">
+                        <p>Los operadores de asignación son fundamentales en la programación y se utilizan para "asignar un valor" a una variable o columna en una base de datos.</p>
+                        <p>Existen diversos tipos de operadores de asignación: </p>
+                        <ol>
+                            <li>Operador de asignación simple.</li>
+                            <li>Operadores de asignación compuesta.</li>
+                        </ol>
+                    </div>
+                </section>
+                <section>
+                    <div class="text-theme">
+                        <h3><p style="color: #00c3ff;"></style>De Asignación simple:</h3>
+                            <p>Este es el operador de asignación más básico.</p>
+                            <p>Se utiliza para asignar el valor de la expresión a la variable.</p>
+                            <p>Por Ejemplo: "x = 10;" </p>
+                    </div>                    
+                </section>
+                <section>
+                    <div class="text-theme">
+                        <h3><p style="color: #00c3ff;">De Asignación Compuesta:</style></h3>
+                        <p>Realizan una operación aritmética y luego asignan el resultado a la variable.</p>
+                        <ol>
+                            <li>+=: Suma la variable con la expresión y asigna el resultado.</li>
+                            <li>-=: Resta la expresión de la variable y asigna el resultad. </li>
+                            <li>*=: Multiplica la variable por la expresión y asigna el resultado. </li>
+                            <li>/=: Divide la variable por la expresión y asigna el resultado. </li>
+                            <li>%=: Calcula el módulo de la variable y la expresión, y asigna el resultado. </li>
+                        </ol>
+                    </div>
+                </section>
+                <section data-transition="zoom-in" id="ej1">
+                    <h3><p style="color: #00c3ff;"></style> Ejemplo de Uso: </h3>
+                    <div class="text-theme">
+                        <p>Operador de asignación simple (=):<a href="#ej1" style="color: lightcoral;">UPDATE empleados SET salario = salario * 1.1 WHERE departamento = 'Ventas'; </a></p>
+                        <p>Operador de adición (+=):<a href="#ej1" style="color: darkcyan;">UPDATE inventario SET cantidad = cantidad + 100 WHERE producto_id = 123;</a></p>
+                        <p>Operador de sustracción (-=) <a href="#ej1" style="color: lightcoral;">UPDATE usuarios SET saldo = saldo - 50 WHERE usuario_id = 456;</a></p>
+                    </div>
+                </section>
+                <section>
+                        <div class="text-theme">
+                            <p>Operador de multiplicación (*=) <a href="#ej11" style="color: darkcyan;">UPDATE productos SET precio = precio * 1.1 WHERE categoria = 'Electrónica';</a></p>
+                            <p>Operador de división (/=) <a href="#ej11" style="color: lightcoral;">UPDATE empleados SET horas_trabajadas = horas_trabajadas / 2 WHERE antiguedad > 5;</a></p>
+                        </div>
+                </section>
+            </section>
+            
+            <section>
+                <section data-transition="zoom-in">
+                    <h3><p style="color: #00c3ff;"></style> Lógicos: </h3>
+                    <div class="text-theme">
+                        <p>Estos operadores se utilizan  se utilizan principalmente en las cláusulas WHERE de las consultas SQL para filtrar filas basadas en condiciones lógicas. </p>
+                        <p>Los operadores lógicos comunes incluyen AND, OR y NOT.</p>
+                        <p>Estos operadores lógicos se pueden combinar utilizando paréntesis y operadores de comparación para crear condiciones más complejas, y condiciones de filtrado más específicas en consultas.</p>
+                    </div>
+                </section>
+                <section>
+                    <h3><p style="color: #00c3ff;"></style> AND </h3>
+                    <div class="text-theme">
+                        <p>El operador lógico OR devuelve true si al menos una de las condiciones separadas por OR es true. Es decir, devuelve true si alguna de las condiciones es verdadera.</p>
+                        <p>SELECT * FROM table_name WHERE condition1 OR condition2;</p>
+                    </div>
+                </section>
+                <section>
+                    <h3><p style="color: #00c3ff;"></style> OR </h3>
+                    <div class="text-theme">
+                        <p>El operador lógico AND devuelve true si todas las condiciones separadas por AND son true. Es decir, solo devuelve true si ambas condiciones son verdaderas.</p>
+                        <p>SELECT * FROM table_name WHERE condition1 AND condition2;</p>
+                    </div>
+                </section>
+                <section>
+                    <h3><p style="color: #00c3ff;"></style> NOT </h3>
+                    <div class="text-theme">
+                        <p>El operador lógico NOT invierte el valor de verdad de una condición. Si la condición es true, NOT la convierte en false, y viceversa.</p>
+                        <p>SELECT * FROM table_name WHERE NOT condition;</p>
+                    </div>
+                </section>
+                <section data-transition="zoom-in" id="ej2">
+                    <h3><p style="color: #00c3ff;"></style> Ejemplo de Uso: </h3>
+                    <div class="text-theme">
+                        <p>Operador AND:<a href="#ej2" style="color: darkcyan;">UPDATE productos SET precio = precio * 0.9 WHERE categoria = 'Electrónica' AND stock > 0;</a></p>
+                        <p>Operador OR:<a href="#ej2" style="color: lightcoral;">UPDATE empleados SET salario = salario * 1.05 WHERE departamento = 'Ventas' OR departamento = 'Marketing';</a></p>
+                        <p>Operador NOT:<a href="#ej2" style="color: darkcyan;">UPDATE clientes SET estado = 'Inactivo' WHERE NOT ultima_compra > '2023-01-01';</a></p>
+                    </div>
+                </section>
+                <section data-transition="zoom-in" id="ej22">
+                    <div class="text-theme">
+                        <p>Uso de varios operadores:<a href="#ej22" style="color: lightcoral;">UPDATE pedidos SET estado = 'Cancelado' WHERE (cantidad > 100 AND precio_unitario > 50) OR (fecha_pedido < '2024-01-01' AND estado != 'Entregado');</a></p>
+                    </div>
+                </section>
+            </section>
+            
+
+            <section>
+                <section >
+                    <div class="text-theme" data-transition="fade-out">
+                        <h3><p style="color: #00c3ff;"></style> Comparación: </h3>
+                        <p>Los operadores de comparación se utilizan para comparar dos valores y producir un valor booleano como resultado. </p>
+                        <p>Algunos operadores de comparación comunes incluyen (=), (<), (>=), etc. </p>
+                        <p>Estos operadores son fundamentales para filtrar datos basados en condiciones específicas, por ejemplo: </p>
+                        <p>SELECT * FROM empleados WHERE salario > 50000;</p>
+                    </div>	
+                </section>
+                <section>
+                    <div class="text-theme">
+                        <h3><p style="color: #00c3ff;">Tipos de Operadores</style></h3>
+                        <ol>
+                            <li>Igual a (=): Verifica si dos valores son iguales. </li>
+                            <li>No Igual a (!= o <>): Verifica si dos valores no son iguales. </li>
+                            <li>Mayor que (>): Verifica si un valor es mayor que otro. </li>
+                            <li>Menor que (<): Verifica si un valor es menor que otro. </li>
+                            <li>Mayor o Igual que (>=): Verifica si un valor es mayor o igual que otro. </li>
+                            <li>Menor o Igual que (<=): Verifica si un valor es menor o igual que otro. </li>
+                        </ol>
+                    </div>
+                </section>
+                <section data-transition="zoom-in" id="ej3">
+                    <h3><p style="color: #00c3ff;"></style> Ejemplo de Uso: </h3>
+                    <div class="text-theme">
+                        <p>Operador de igualdad(=):<a href="#ej3" style="color: darkcyan;">UPDATE empleados SET salario = 50000 WHERE nombre = 'Juan';</a></p>
+                        <p>Operador mayor que (>):<a href="#ej3" style="color: lightcoral;">UPDATE productos SET estado = 'Agotado' WHERE stock > 0;</a></p>
+                        <p>Operador menor que (<):<a href="#ej3" style="color: darkcyan;">UPDATE tareas SET prioridad = 'Alta' WHERE fecha_limite < '2024-03-01';</a></p>
+                    </div>
+                </section>
+                <section data-transition="zoom-in" id="ej33">
+                    <div class="text-theme">
+                        <p>Operador mayor o igual que (>=):<a href="#ej33" style="color: lightcoral;">UPDATE estudiantes SET calificacion = 'Aprobado' WHERE promedio >= 7.0;</a></p>
+                        <p>Operador menor o igual que (<=):<a href="#ej33" style="color: darkcyan;">UPDATE pedidos SET estado = 'Entregado' WHERE fecha_entrega <= '2024-03-09';</a></p>
+                        <p>Operador diferente de (! = o <>):<a href="#ej33" style="color: lightcoral;">UPDATE clientes SET estado = 'Moroso' WHERE saldo != 0;</a></p>
+                    </div>
+                </section>
+            </section>
+            
+            <section>
+                <section>
+                    <div class="text-theme" data-transition="fade-out">
+                        <h3><p style="color: #00c3ff;"></style>  Aritméticos: </h3>
+                        <p>Los operadores Aritméticos se utilizan para realizar operaciones matemáticas en los datos (valores numéricos).</p>
+                        <p>Esto incluye operadores como "+", "-", "*", "/", etc. Estos operadores son útiles en consultas que implican cálculos numéricos.</p>
+                    </div>	
+                </section>
+                <section>
+                    <div class="text-theme">
+                        <h3><p style="color: #00c3ff;">Tipos de Operadores</style></h3>
+                        <ol>
+                            <li>Suma (+): SELECT columna1 + columna2 AS suma_total FROM tabla;  </li>
+                            <li>Resta (-): SELECT columna1 - columna2 AS resta_total FROM tabla; </li>
+                            <li>Multiplicación (*): SELECT columna1 * columna2 AS producto_total FROM tabla; </li>
+                            <li>División (/): SELECT columna1 / columna2 AS division_total FROM tabla; </li>
+                            <li>Módulo (%): SELECT columna1 % columna2 AS resto_division FROM tabla; </li>
+                        </ol>
+                    </div>
+                </section>
+                <section>
+                    <div class="text-theme" data-transition="fade-out">
+                        <h3><p style="color: #00c3ff;"></style> En  otras bases de datos </h3>
+                        <p>En MySQL, PostgreSQ y Oracle los operadores aritméticos son los mismos que en SQL estándar. </p>
+                        <ol>
+                            <li>MySQL: ofrece funciones como ABS()el valor absoluto, ROUND()redondear un número y POWER()calcular una potencia. </li>
+                            <li>PostgreSQ:  ofrece funciones como SQRT()raíz cuadrada, LOG()logaritmo natural y EXP()exponencial. </li>
+                            <li>Oracle: proporciona funciones como SQRT(), POWER()y MOD()obtener el resto de una división. </li>
+                        </ol>
+                    </div>	
+                </section>
+                <section data-transition="zoom-in" id="ej4">
+                    <h3><p style="color: #00c3ff;"></style> Ejemplo de Uso: </h3>
+                    <div class="text-theme">
+                        <p>Operador de suma(+):<a href="#ej4" style="color: darkcyan;">UPDATE productos SET stock = stock + 100 WHERE categoria = 'Electrónica';                        </a></p>
+                        <p>Operador de resta(-):<a href="#ej4" style="color: lightcoral;">UPDATE empleados SET horas_trabajadas = horas_trabajadas - 8 WHERE turno = 'Noche';
+                        </a></p>
+                        <p>Operador de multiplicación(*):<a href="#ej2" style="color: darkcyan;">UPDATE ventas SET total = cantidad * precio_unitario WHERE producto_id = 123;
+                        </a></p>
+                    </div>
+                </section>
+                <section data-transition="zoom-in" id="ej44">
+                    <div class="text-theme">
+                        <p>Operador de división(/):<a href="#ej44" style="color: lightcoral;">UPDATE empleados SET salario = salario / 2 WHERE antiguedad < 1;
+                        </a></p>
+                        <p>Operador de modulo(%):<a href="#ej44" style="color: darkcyan;">UPDATE usuarios SET puntos = puntos % 1000 WHERE tipo = 'Premium';
+                        </a></p>
+                    </div>
+                </section>
+            </section>
+            
+
+            <section>
+                <section>
+                    <div class="text-theme" data-transition="fade-out">
+                        <h3><p style="color: #00c3ff;"></style> Precedencia: </h3>
+                        <p> No son operadores en sí mismos, sino que determinan el orden en que se evalúan las expresiones en una consulta.</p> 
+                        <p> Es decir, indican qué operaciones se realizan primero en una expresión matemática o lógica.</p>
+                        <p> Esto es importante para garantizar que las operaciones se realicen en el orden correcto y se obtengan los resultados esperados.</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="text-theme" data-transition="fade-out">
+                        <ol>
+                            <li>De operadores aritméticos: </li>
+                                <ul>
+                                    <li>Multiplicación (*), División (/), Módulo (%) </li>
+                                    <li>Suma (+), Resta (-) </li>  
+                                </ul>  
+                            <li>De operadores lógicos: </li>
+                                <ul>
+                                    <li>NOT </li>
+                                    <li>AND </li>
+                                    <li>OR </li>
+                                </ul> 
+                            <li>Uso de paréntesis: </li>
+                                <p>Las expresiones dentro de paréntesis se evalúan primero, y luego se aplican los operadores circundantes.Esto te permite controlar explícitamente el orden de las operaciones y evitar ambigüedades. </p>
+                        </ol>
+                    </div>
+                </section>
+                <section>
+                    <div class="text-theme" data-transition="fade-out">
+                        <h3><p style="color: #00c3ff;"></style> En Resumén: </h3>
+                        <p>En una expresión que contiene operadores aritméticos lógicos, la precedencia establece qué operadores se evalúan primero.</p>  
+                        <p>Los paréntesis pueden utilizarse para anular la precedencia estándar y controlar el orden de evaluación.</p> 
+                    </div>
+                </section>
+                <section>
+                    <div class="text-theme" data-transition="fade-out">
+                        <h3><p style="color: #00c3ff;"></style> Por Ejemplo: </h3>
+                        <p>SELECT * FROM tabla WHERE columna1 = 1 AND (columna2 = 2 OR columna3 = 3) </p>
+                        <p>En esta consulta, los operadores lógicos AND y OR se combinan con paréntesis para definir claramente el orden de evaluación de las condiciones. </p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="text-theme" data-transition="fade-out">
+                        <p>Como ya dijimos, la precedencia de los operadores determina el orden en que se evalúan las expresiones. Sin embargo, en las sentencias de actualización (UPDATE), la precedencia no juega un papel tan crucial como en las expresiones condicionales (por ejemplo, en las cláusulas WHERE).</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="text-theme" data-transition="fade-out">
+                        <p>Es importante tener en cuenta que en SQL estándar, no hay operadores de precedencia explícitos como en algunos otros lenguajes de programación. En su lugar, las operaciones se evalúan en un orden determinado por la especificación del lenguaje.</p>
+                        <div class="text-theme"><a href="tema-ddl-dml.html#theme0"><img src="images/iconhome.webp" style="width: 5%;"></a></div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+    <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+            });
+        </script>
+        Reveal.initialize({
+            transition: 'linear'
+        });
+    </script>
+</body>
+</html>
+
+
+
+
