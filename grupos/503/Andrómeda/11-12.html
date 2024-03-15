@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>reveal.js</title>
+    <link rel="stylesheet" href="../../../dist/reset.css">
+    <link rel="stylesheet" href="../../../dist/reveal.css">
+    <link rel="stylesheet" href="../../../dist/theme/black.css">
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../../../plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>CONSULTAR TABLAS</h2>
+            <p> Consultar una tabla en una base de datos sirve para obtener información específica almacenada en esa tabla.
+            </p>
+            <ul>
+                <li>Recuperar datos</li>
+                <li>Filtrar datos</li>
+                <li>Actualizar datos</li>
+                <li>Eliminar datos</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Comandos para consultar una tabla</h2>
+            <ul>
+                <li>SELECT * FROM...</li>
+                <li>SELECT ... FROM...</li>
+                <li>SELECT ... AS ... FROM...</li>
+                <li>SELECT DISTINCT ... FROM...</li>
+                <li>SELECT ... FROM ... WHERE...</li>
+                <li>SELECT ... FROM ... WHERE ... AND...</li>
+                <li>SELECT ... FROM ... LIMIT ..., ...</li>
+            </ul>
+        </section>
+        <section>
+            <h2>SELECT * FROM...</h2>
+            <p>Si queremos mostrar todos los registros de una tabla usaremos SELECT * FROM y el nombre de la tabla.</p>
+            <img src="imag/imagen1.png" alt="SELECT * FROM...">
+        </section>
+        <section>
+            <h2>SELECT...FROM...</h2>
+            <p>Podemos realizar una consulta donde se nos muestre solo las columnas que nos interesa.</p>
+            <img src="imag/imagen2.png" alt="SELECT...FROM...">
+        </section>
+        <section>
+            <h2>SELECT DISTINCT...FROM...</h2>
+            <p>En una consulta podría haber registros repetidos, si quisiéramos evitar mostrar las filas repetidas usaríamos el comando DISTINCT.</p>
+            <img src="imag/imagen3.png" alt="SELECT DISTINCT...FROM...">
+        </section>
+        <section>
+            <h2>SELECT...FROM...WHERE...</h2>
+            <p>Si queremos filtrar las filas que aparecen en la consulta podemos usar la sentencia WHERE.</p>
+            <img src="imag/imagen4.png" alt="SELECT...FROM...WHERE...">
+        </section>
+        <section>    
+            <h2>SELECT...FROM...WHERE...AND</h2>
+            <p>Incluso anidar 2 condiciones usando el comando AND.</p>
+            <img src="imag/imagen5.png" alt="SELECT...FROM...WHERE...AND...">
+        </section>
+        <section>
+            <h2>La cláusula LIMIT</h2>
+            <p>La cláusula LIMIT puede usarse con 2 parámetros. Cuando se usan ambos, el primero muestra la fila a partir de la que debemos empezar a mostrar registros, y el segundo parámetro muestra el número de filas a mostrar (contando desde la primera)</p>
+            <img src="imag/imagen6.jpg" alt="La cláusula LIMIT">
+        </section>
+        <section>
+            <h2>AGRUPAR FILAS</h2>
+            <p>Agrupar filas en una base de datos es útil para realizar operaciones de resumen y análisis de datos más avanzadas.</p>
+            <ul>
+                <li>Análisis de tendencias</li>
+                <li>Optimización de consultas</li>
+                <li>Segmentación de datos</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Comandos para agrupar filas</h2>
+            <ul>
+                <li>SELECT … FROM … GROUP BY…</li>
+                <li>SELECT … COUNT(*) FROM … GROUP BY…</li>
+                <li>SELECT … COUNT(*) AS … FROM … GROUP BY…</li>
+                <li>SELECT … MAX(…) FROM … GROUP BY … HAVING MAX(…) …</li>
+            </ul>
+        </section>
+        <section>
+            <h2>SELECT … FROM … GROUP BY…</h2>
+            <p>Es posible agrupar filas en la salida de una sentencia SELECT según los distintos valores de una columna, usando la cláusula GROUP BY.</p>
+            <img src="imag/imagen7.jpg" alt="SELECT … FROM … GROUP BY…">
+        </section>
+        <section>
+            <h2>SELECT … COUNT(*) FROM … GROUP BY…</h2>
+            <p>Pero la diferencia principal es que el uso de la cláusula GROUP BY permite usar funciones de resumen o reunión. Por ejemplo, la función COUNT().</p>
+            <img src="imag/imagen8.jpg" alt="SELECT … COUNT(*) FROM … GROUP BY…">
+        </section>
+        <section>
+            <h2>SELECT … MAX(…) FROM … GROUP BY … HAVING MAX(…) …</h2>
+            <p>La cláusula HAVING() permite hacer selecciones con GROUP BY en columnas calculadas con funciones de grupo, como MAX(), MIN(), AVG(), COUNT()… Se podría entender como un WHERE para usar junto a GROUP BY().</p>
+            <img src="imag/imagen9.jpg" alt="SELECT … MAX(…) FROM … GROUP BY … HAVING MAX(…) …">
+        </section>
+    </div>
+</div>
+<script src="../../../dist/reveal.js"></script>
+<script src="../../../plugin/notes/notes.js"></script>
+<script src="../../../plugin/markdown/markdown.js"></script>
+<script src="../../../plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+</script>
+</body>
+</html>
