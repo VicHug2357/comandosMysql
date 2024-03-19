@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>13 y 14</title>
+
+		<link rel="stylesheet" href="../../../dist/reset.css">
+		<link rel="stylesheet" href="../../../dist/reveal.css">
+		<link rel="stylesheet" href="../../../dist/theme/blood.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../../plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="convex" data-background-color="rgb(65,0,0)">
+					<h2 class="r-fit-text">Claves Ajenas y operadores</h2></section>
+				<section>
+					<section data-transition="convex" data-background-color="rgb(139,0,0)">
+					<h1 class="r-fit-text">CLAVES AJENAS </h1>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(255,96,96)">
+						<h1 class="r-fit-text">¿Qué son?</h1>
+						<p>Una clave ajena es un campo o combinación de campos en una tabla que establece una relación con los datos en otra tabla.</p>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(255,96,96)">
+						<h1 class="r-fit-text">Usos principales</h1>
+						<p>1.- Garantizan la integridad referencial entre tablas.</p>
+						<p>2.- Definen relaciones entre las tablas de una base de datos.</p>
+						<p>3.- Permiten realizar operaciones JOIN, que son esenciales para combinar datos de diferentes tablas en consultas SQL.</p>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(255,96,96)">
+						<h1 class="r-fit-text">Usos principales</h1>
+						<p>4.- Pueden estar asociadas con acciones de cascada que se activan automáticamente cuando ocurren cambios en los datos relacionados. </p>
+						<p>5.- Al utilizar claves ajenas en consultas JOIN, se pueden mejorar el rendimiento de las consultas, ya que la base de datos puede utilizar índices asociados con las claves para buscar y combinar datos de manera eficiente.</p>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(255,96,96)">
+						<h1 class="r-fit-text">Características de la clave foranea</h1>
+						<p>1.- Debe referenciar una clave primaria o única en otra tabla.</p>
+						<p>2.- Los valores de la columna de la clave ajena deben ser valores existentes en la columna de la clave primaria o única a la que hace referencia.</p>
+						<p>3.- Se establecen restricciones de integridad referencial para garantizar que los datos relacionados sean coherentes.</p>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(255,96,96)">
+						<h1 class="r-fit-text">Características de la clave foranea</h1>
+						<p>4.- Pueden estar asociadas con acciones de cascada que se activan automáticamente cuando ocurren cambios en los datos relacionados. </p>
+						<p>5.- Se crean índices en las columnas de las claves ajenas para mejorar el rendimiento de las operaciones de búsqueda y combinación de datos.</p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="zoom" data-background-color="rgb(169,0,0)">
+						<h1 class="r-fit-text">OPERADORES</h1>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(242,129,121)">
+						<p>Son símbolos que se utilizan en la elaboración de una ecuación de búsqueda y que</p>
+						<p>permiten combinar diferentes términos entre sí y establecer relaciones lógicas entre los términos.</p>
+					</section>
+					<section data-transition="zoom" data-background-color="rgb(255,0,0)">
+						<h2 class="r-fit-text">Tipos de Operadores</h2>
+						<p>1.Asignación</p>
+						<p>2.Lógicos</p>
+						<p>3.De comparación</p>
+						<p>4.Aritméticos</p>
+						<p>5.Precedencia</p>
+					</section>
+					<section data-transition="zoom" data-background-color="rgb(192,64,64)">
+						<h2>Asignación</h2>
+						<p>Los operadores de asignación almacenan un valor en el objeto especificado por el operando izquierdo.</p>
+						<p>Hay dos tipos de operaciones de asignación:</p>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(242,129,121)">
+						<h2>Simple y compuesta</h2>
+						<p>La asiganción simple, es en la que el valor del segundo operando se almacena en el objeto especificado por el primer operando.</p>
+						<p>La asignación compuesta, es en la que se realiza una operación aritmética, de desplazamiento o bit a bit antes de almacenar el resultado.</p>
+					</section>
+					<section data-transition="zoom" data-background-color="rgb(192,64,64)">
+						<h1 class="r-fit-text">Lógicos</h1>
+						<p>Son una herramienta fundamental en la programación de bases de datos. 
+							En MySQL, los operadores lógicos permiten realizar consultas complejas, combinando múltiples condiciones en una sola sentencia</p>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(242,129,121)">
+						<p>AND: se utiliza para combinar condiciones y obtener resultados que cumplan con ambas condiciones a la vez.</p>
+						<p>OR: se utiliza para combinar condiciones y obtener resultados que cumplan con alguna de las condiciones especificadas.</p>
+						<p>NOT: se utiliza para negar una condición y obtener resultados que no cumplan con dicha condición.</p>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(242,129,121)">
+						<h1 class="r-fit-text">Conjunción y Disyunción</h1>
+						<p>La conjunción (AND) es una operación lógica que devuelve verdadero si y sólo si ambos operandos son verdaderos. Por ejemplo, la conjunción de las proposiciones "P" y "Q" se escribe "P ∧ Q", y es verdadera sólo si tanto P como Q son verdaderos.</p>
+						<p>La disyunción (OR) es una operación lógica que devuelve verdadero si y sólo si uno o más de sus operandos son verdaderos. Por ejemplo, la disyunción de las proposiciones "P" y "Q" se escribe "P ∨ Q", y es verdadera si P o Q son verdaderos, o ambos.</p>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(242,129,121)">
+						<h1 class="r-fit-text">Negación</h1>
+						<p>La negación (NOT) es una operación lógica que devuelve verdadero si y sólo si su operando es falso. Por ejemplo, la negación de la proposición "P" se escribe "¬P", y es verdadera sólo si P es falso.</p>
+						<p></p>
+					</section>
+					<section data-transition="zoom" data-background-color="rgb(192,64,64)">
+						<h2 class="r-fit-text">De Comparación</h2>
+						<p>Estos nos permiten crear expresiones lógicas que aplican el álgebra de Boole. Podemos comparar fechas, cadenas, números, etcétera. Se devuelven valores lógicos como Verdadero (1) o Falso (0). </p>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(242,129,121)">
+						<h1 class="r-fit-text">Signos de Operadores</h1>
+						<p>Igualdad (=)</p>
+						<p>Igualdad sin devolver NULL (<=>)</p>
+						<p>Operador de Desigualdad (<>)</p>
+						<p>Operadores de Comparacion de Magnitudes (<, <=, >, =>)</p>
+					</section>
+					<section data-transition="zoom" data-background-color="rgb(192,64,64)">
+						<h2>Aritméticos</h2>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(242,129,121)">
+							<h1 class="r-fit-text">¿Qué son?</h1>
+							<p>Los operadores aritméticos en bases de datos son utilizados para realizar operaciones matemáticas en los datos almacenados.</p> 
+							<p>Estos operadores incluyen suma (+), resta (-), multiplicación (*), división (/), módulo (%) y exponente (^).</p> 
+							<p>Utilizados en SQL para realizar cálculos y manipulaciones de datos.</p>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(242,129,121)">
+						<p>MySQL dispone de operadores aritméticos para poder operar entre valores numéricos.</p>
+						<p>El resultado siempre es un valor numérico.</p>
+						<p>En caso que los operandos sean enteros, el resultado se devuelve con el tipo BIGINT, que es un tipo de dato numérico de 64 bits.</p>
+						<p>Se tiene en cuenta para números grandes.</p>
+					</section>
+					<section>
+						<img width="600xp"; src="img/1.jpeg"/>
+					</section>
+					<section>
+						<img width="1000xp"; src="img/2.jpeg"/>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(200,29,29)">
+						<h3>NOTA:</h3>
+						<h3>Para consultar los operadores aritméticos tecleea:</h3>
+						<h1 class="r-fit-text">Help Numerie Functions</h1>
+					</section>
+					<section data-transition="zoom" data-background-color="rgb(192,64,64)">
+						<h2>Precedencia</h2>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(242,129,121)">
+						<p>Los operadores de precedencia siguen un conjunto de reglas estándar que dictan el orden en que se deben evaluar las diferentes partes de una consulta.</p>
+						<p>Estas reglas son similares a las utilizadas en las expresiones matemáticas, donde se da prioridad a ciertas operaciones sobre otras</p>
+					</section>
+					<section data-transition="convex" data-background-color="rgb(242,129,121)">
+						<h3>Los operadores de precedencia comunes en SQL incluyen:</h3>
+						<p>Paréntesis: Las operaciones dentro de paréntesis se evalúan primero.</p>
+						<p>Multiplicación, división y módulo: Estas operaciones se evalúan después de los paréntesis.</p>
+					</section>
+						<section  data-transition="convex" data-background-color="rgb(242,129,121)">
+						<h3>Los operadores de precedencia comunes en SQL incluyen:</h3>
+						<p>Suma y resta: Estas operaciones se evalúan después de las operaciones de multiplicación, división y módulo</p>
+						<p>Operadores de comparación (como "=", "<", ">", "<=", ">=") y operadores lógicos (como "AND", "OR", "NOT"): Se evalúan después de las operaciones aritméticas</p>
+					</section>
+				</section>
+				<section data-transition="convex" data-background-color="rgb(255,96,96)">
+					<h2>INTEGRANTES</h2>
+					<p>Amador Salais María Fernanda</p>
+					<p>Jardinez Maldonado Jorge Yahir</p>
+					<p>Lopez Leonardo</p>
+					<p>Moncada Lazcano Rosalba</p>
+					<p>Murcia Gómez Rodolfo Sebastián</p>
+					<p>Sevilla Pacheco Jonathan Joel</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../../dist/reveal.js"></script>
+		<script src="../../../plugin/notes/notes.js"></script>
+		<script src="../../../plugin/markdown/markdown.js"></script>
+		<script src="../../../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: 'true',
+
+				progress: 'true',
+
+				slideNumber: 'all',
+
+				transition: 'slide',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
