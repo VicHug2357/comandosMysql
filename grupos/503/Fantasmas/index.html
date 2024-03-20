@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="../../../dist/reset.css">
+		<link rel="stylesheet" href="../../../dist/reveal.css">
+		<link rel="stylesheet" href="../../../dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../../plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Reemplazar y Actualizar Filas en SQ</h3>
+				<P>Equipo: 3</P>
+				<p>Integrantes:</p>
+				<p>Hidalgo Lira Almir Alier</p>
+				<p>Hernandez Hernadez Daniel</p>
+				<p>López García Axel Steven</p>
+				<p>Bustos Olivares Mara Naomi</p>
+				<p>Trejo Jimenez Yoav Zipacna</p>
+			</section>
+			<section style="text-align:center;">
+				<h3>INTRODUCCIÓN</h3>
+				<p>En el mundo de la gestión de bases de datos, la actualización y el reemplazo de filas en MySQL 
+					no son solo tareas comunes, sino que son esenciales para mantener la integridad, la eficiencia y 
+					la precisión de los datos almacenados. MySQL ofrece diversas herramientas y técnicas para llevar a cabo estas operaciones de 
+					manera efectiva. </p>
+			</section>
+			<section class="explanation">
+				<h2>Reemplazar filas en MySQL</h2>
+				<p>En MySQL, puedes reemplazar filas existentes en una tabla utilizando la sentencia <code>REPLACE INTO</code>.</p>
+				<p>La sintaxis general de la sentencia REPLACE INTO es:</p>
+				<pre><code>REPLACE INTO nombre_tabla (columna1, columna2, ...) VALUES (valor1, valor2, ...);</code></pre>
+				<p>Esta sentencia reemplaza una fila existente si ya existe un registro con la misma clave primaria o una clave única.</p>
+			</section>
+			<section>
+				<p>Si no existe un registro con la misma clave primaria o única, la sentencia INSERT INTO se comporta como una sentencia INSERT INTO normal y se inserta una nueva fila en la tabla.</p>
+				<p>Es importante tener en cuenta que la tabla debe tener una clave primaria o una clave única definida para que REPLACE INTO funcione correctamente.</p>
+				<pre><code>REPLACE INTO estudiantes (id, nombre, edad) VALUES (1, 'Juan', 25);</code></pre>
+				<p>Esta sentencia reemplazaría la fila en la tabla 'estudiantes' con el ID 1, si ya existe, o insertaría una nueva fila si no existe.</p>
+			</section>
+			
+				<section>
+					<h2>ACTUALIZACIÓN DE FILAS</h2>
+					Es una parte esencial para poder mantener la consistencia e integridad de los datos.
+					    Ya que al haber modificaciones, es crucial sustentar todas las versiones actuales para 
+						verificar con las especificaciones requeridas</section>
+
+			
+			<section>
+				<section>
+					<h3>SENTENCIA UPDATE</h3>
+					<p>Toda la columna: Para modificar el contenido en
+						las columnas de un esquema de relación(o tabla), se debe
+					    indicar cual es la tabla donde se aplicara el cambio, la
+					    columna y el nuevo valor que se quiera colocar</p>
+						<pre>
+							<code>
+								mysql>update *tabla* set *columna*='*valor*';
+							</code>
+						</pre>
+				</section>
+				<section>
+					<h3>EJEMPLO</h3>
+					<p>mysql>update integrantes set rol = 'Integrante';</p>
+					<p>mysql>update *tabla* set *columna* = '*valor*';</p>
+					<img src="IMG/MYSQL LINE.jpg" style="width: 55%">
+					<img src="IMG/MYSQL INT.jpg" style="width: 40%">
+				</section>
+				<section>
+					<h3>SENTENCIA UPDATE</h3>
+					<p>Una casilla a la vez: Para cambiar los valores
+						de un espacio especifico se indica la tabla,
+					    la columna, el nuevo valor y la columna del atributo/propiedad
+						junto a su atributo.</p>
+						<pre>
+							<code>
+			mysql>update *tabla* set *colunma*='*valor*' WHERE *columna_atributo* = '*atributo*';
+							</code>
+						</pre>
+				</section>
+				<section>
+					<h3>EJEMPLO</h3>
+					<p>mysql>update integrantes set rol = 'Integrante' WHERE nombre_integrante = 'Almir';</p>
+					<img src="IMG/LINE CONSOLE.jpg" style="width: 55%">
+				</section>	
+			</section>
+			<section>
+				<h3>CONCLUSIÓN</h3>
+				<p>La importancia de actualizar y reemplazar filas en MySQL no puede ser subestimada en el contexto de la gestión
+					 de bases de datos. Estas operaciones no solo garantizan la precisión y la integridad de los datos almacenados, 
+					 sino que también son fundamentales para mantener la eficiencia y el rendimiento del sistema en general. 
+					 </p>
+			</section>
+			</div>
+		</div>
+
+		<script src="../../../dist/reveal.js"></script>
+		<script src="../../../plugin/notes/notes.js"></script>
+		<script src="../../../plugin/markdown/markdown.js"></script>
+		<script src="../../../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
