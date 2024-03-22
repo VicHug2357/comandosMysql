@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Presentacion</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/dracula.css">
+
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+			<h3>Consultas multitabla</h3>
+			<a href="#/3">°Composiciones internas</a>		
+			<h3></h3>
+			<a href="#/4">°Composiciones externas</a>
+			<h3></h3>
+			<a href="#/5"> Subconsultas</a>
+		</section>
+		<section> 
+			<h2>Composiciones internas:</h2>
+			 Son aquellas que parten de un producto cartesiano entre dos tablas.
+		
+		</section>
+
+		<section>
+			<h2>Composiciones externas:</h2>
+			No se originan de un producto cartesiano sino que se 
+toma un registro de una tabla y se busca registros de otra tabla que coincidan en el atributo
+indicado.
+		</section>
+		<section>
+		<section>
+			<h6>Composiciones internas:</h6>
+			
+			 mysql> SELECT * FROM (nombretabla1) JOIN (nombretabla2); 
+		</section>
+		<section>
+			mysql> SELECT * FROM (nombretabla1) JOIN (nombretabla2) ON ((nombretabla1).id =
+(nombretabla2).id);
+	   </section>
+	   <section>
+		mysql> SELECT * FROM (nombretabla1) NATURAL JOIN (nombretabla2);
+		<h2></h2>
+		<a href="#/0">Regresar</a>
+	   </section>
+	</section>
+		<section>
+	   <section>
+		<h6>Composiciones externas</h6>
+		mysql> SELECT * FROM (nombretabla1) LEFT JOIN (nombretabla2) ON 
+		((nombretabla1).id=(nombretabla2).id);
+
+	   </section>
+	   <section>
+		mysql> SELECT * FROM (nombretabla1) RIGHT JOIN (nombretabla2) ON 
+((nombretabla1).id=(nombretabla2).id);
+	   </section>
+	   <section>
+		mysql> SELECT * FROM (nombretabla1) NATURAL RIGHT JOIN (nombretabla2);
+	   </section>
+	   <section>
+		mysql> SELECT * FROM (nombretabla1) NATURAL LEFT JOIN (nombretabla2);
+		<h2></h2>
+		<a href="#/0">Regresar</a>
+
+	   </section>
+	   </section>
+	   <section>
+	   <section>
+		<h6>Subconsultas</h6>
+		mysql> select * from (nombretabla1);
+	   </section>
+	   <section>
+		mysql> select * from (nombretabla2);
+	   </section>
+	   <section>
+		mysql> select * from (nombretabla3);
+	   </section>
+	   <section>
+		mysql> SELECT nombre FROM (nombretabla2) WHERE id IN (SELECT 
+idProveedor from (nombretabla3) WHERE codigo(nombretabla1) = 1);
+		<h2></h2>
+		<a href="#/0"> Regresar</a>
+
+	   </section>
+	   </section>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+		
+			Reveal.initialize({
+				hash: true,
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
