@@ -7,7 +7,7 @@
     <!-- Enlaces a los estilos CSS -->
     <link rel="stylesheet" href="../../../dist/reset.css">
     <link rel="stylesheet" href="../../../dist/reveal.css">
-    <link rel="stylesheet" href="../../../dist/theme/mydesing.css">
+    <link rel="stylesheet" href="Recursos/mydesing.css">
     <!-- Tema utilizado para resaltar la sintaxis del código -->
     <link rel="stylesheet" href="../../../plugin/highlight/monokai.css">
 </head>
@@ -21,7 +21,9 @@
             <!-- Y la propiedad de data transition va a ir una diapositiva si y un una no  -->
             <!-- Añade más diapositivas según sea necesario -->
             <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
-                <h3>Crear y Borrar tablas </h3><br>
+                <h2>
+                    <font face="Luminari,fantasy"> Crear y Borrar tablas </font>
+                     </h2><br>
                 <p align="left">Elaborado por:</p>
                 <p align="left"># Jesse Isaac Guerrero Jimenez</p>
                 <p align="left"># Luis Mario Maurio Jimenez</p>
@@ -30,19 +32,64 @@
                 <p align="left"># Jorge nuñez fernandez</p>
             </section>
 
-            <section data-transition="slide" data-background="#D32F2F" data-background-transition="zoom">
-                <h2>Índice</h2>
+            <section data-transition="slide" data-background="#922B21 " data-background-transition="zoom">
+                <h2>
+                    
+                    Índice</h2>
                 <ul>
                 CREAR UNA TABLA
-                    
-                    <li><a href="#slide2">Valores por defecto</a></li>
-                    <li><a href="#slide3">Claves primarias</a></li>
-                    <li><a href="#slide4">Claves primarias compuestas</a></li>
-                    <li><a href="#slide5">Columnas autoincrementadas</a></li>
-                    <li><a href="#slide6">Comentarios</a></li>
+                    <li> 
+                        <a href="#slide1" >Definición de Valores por defecto</a></li>
+                    <li><a href="#slide2" >Valores por defecto</a></li>
+                    <li><a href="#slide3" >Claves primarias</a></li>
+                    <li><a href="#slide4" >Claves primarias compuestas</a></li>
+                    <li><a href="#slide5" >Columnas autoincrementadas</a></li>
+                    <li><a href="#slide6" >Comentarios</a></li>
                 BORRAR UNA TABLA
                 </ul>
             </section>
+
+        <section data-transition="slide" data-background="rgb(0, 50, 60)" data-background-transition="zoom">
+            <h4>NOT NULL/NULL</h4>
+            <li>Al definir cada columna podemos decidir si podra o no contener valores nulos</a></li>
+            <li>Al insertar datos en una tabla, puedes omitir valores para columnas que permiten valores nulos, lo que significa
+                que esos campos no tendran un valor definido. </a></li>
+        </section>
+
+        <section data-transition="slide" data-background="rgb(0, 50, 60)" data-background-transition="zoom">
+            <h4>COMPROBACIONES DE NULOS</h4>
+            <li>Se puede usar la funcion "IS NULL" O "IS NOT NULL" en las consultas para verificar si un valor es nulo o no</a>
+            </li>
+            <li>Valores Predeterminados:Al definir una columna en una tabla, podemos especificar un valor predeterminado
+                utilizando la clausula "DEFAULT"</a></li>
+            <li>Indices y valores nulos: Mysql maneja los valores nulos de manera especial en los indices.Ejemplo...</a></li>
+            <li>Consultas: Al realizar consultas es importante tomar en cuenta como se manejan los valores</a></li>
+        </section>
+
+        <section data-transition="slide" data-background="rgb(0, 50, 60)" data-background-transition="zoom">
+            <h4>VALORES NULOS</h4>
+            <li>ALTER TABLE: esto modifica la columna en la tabla para no permitir valores nulos.
+                Si la columna ya contiene valores nulos esta operacion fallara a menos que todos los valores nulos sean
+                actualizados o eliminados.</a></li>
+        </section>
+
+        <section data-transition="slide" data-background="rgb(0, 50, 60)" data-background-transition="zoom">
+            <h4>IMPORTANCIA</h4>
+            <li>Proporcionan flexibilidad en el manejo de datos, permitiendo que ciertos campos no tengan información sin romper
+                la integridad de la tabla.</a></li>
+            <li>Son útiles para representar información desconocida o no aplicable en ciertos contextos.</a></li>
+        </section>
+
+        <section data-transition="slide" data-background="rgb(0, 50, 60)" data-background-transition="zoom">
+            <h4>EJEMPLOS DE USO</h4>
+            <li>En una tabla de empleados, el campo "fecha de nacimiento" puede ser nulo si la fecha no se ha registrado.</a>
+            </li>
+            <li>Campo: Fecha de Envío
+                Ejemplo: Para los pedidos que aún no han sido enviados,
+                la fecha de envío puede no estar disponible.
+                En este caso, el campo "Fecha de Envío" podría ser nulo hasta que se realice el envío del pedido.</a></li>
+        </section>
+
             
         <section>
             <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
@@ -110,6 +157,7 @@
                    );
                 </code></pre>
 
+
                 <div>
                     <img src="Recursos/Diapo 5 Ejemplo.png" alt="Imagen" width="550" height="200">
                   </div>
@@ -153,18 +201,33 @@
                 </p>
             </section>
 
-            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+            <section data-transition="slide" data-background="#4a7764" data-background-transition="zoom">
                 <h2>EJEMPLOS</h2>
                 <p>AUTO_INCREMENT</p>
             </section>
 
             <section>
-                <img src="Recursos\autoincremento_1.JPG" width="800" height="auto"">
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+                    mysql> create table EMPLEADO (
+                    -> IdEmpleado INT AUTO_ INCREMENT PRIMARY KEY,
+                    -> primerNombre VARCHAR(10),
+                    -> segundoNombre VARCHAR(10),
+                    -> apellidop VARCHAR(20),
+                    -> apellidoM VARCHAR(20),
+                    -> edad INT);
+                </code></pre>
                 <img src="Recursos\autoincremento_1.2.JPG" width="900" height="auto"">
             </section>
 
-            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
-                <img src="Recursos\autoincremento_2.JPG" width="800" height="auto"">
+            <section data-transition="slide" data-background="#4a7764" data-background-transition="zoom">
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+                    mysql> create table EMPRESA (
+                    -> id INT AUTO_ INCREMENT PRIMARY KEY NOT NULL, 
+                    -> ciudad VARCHAR(25) NOT NULL,
+                    -> pais VARCHAR(25) NOT NULL,
+                    -> telefono VARCHAR(10) NOT NULL)
+                    AUTO INCREMENT=20;
+                </code></pre>
                 <img src="Recursos\autoincremento_2.2.JPG" width="900" height="auto"">
             </section>
         </section>
@@ -181,11 +244,18 @@
                 </p>
             </section>
 
-            <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
+   
+            <section data-transition="slide" data-background="#4a7764" data-background-transition="zoom">
                 <h3>
                     <font face="Cambria">COMMENT</font>
                     </h3>
-                <img src="Recursos\comment.1.JPG" width="800" height="auto"">
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+                        mysql> CREATE TABLE ESTUDIANTE (
+                        -> matricula INT AUTO_INCREMENT PRIMARY KEY COMMENT 'id_del_alumno'
+                        -> carrera VARCHAR(20),
+                        -> promedio INT NOT NULL,
+                        -> grupo INT);
+                </code></pre>
                 <img src=" Recursos\comment.1.2.JPG" width="900" height="auto"">
             </section>
         </section>
@@ -198,7 +268,7 @@
                     DROP TABLE <br>
 
                 <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
-                    DROP TABLE telef;
+                    DROP TABLE (nombre de la tabla);
                 </code></pre>
                 
             </section>
