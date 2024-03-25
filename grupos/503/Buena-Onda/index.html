@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Exposición Unidad 3</title>
+
+		<link rel="stylesheet" href="../../../dist/reset.css">
+		<link rel="stylesheet" href="../../../dist/reveal.css">
+		<link rel="stylesheet" href="../../../dist/theme/black.css">
+
+		<link rel="stylesheet" href="../../../plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<img src="Assests/LogoUPT.png" alt="" style="width: 500px; height: 200px;">
+					<h1 style="font-size: larger; color: blueviolet;">Exposición Consultas Multitabla y Subconsultas</h1>
+					<h2>Ingeniería en Sistemas</h2>
+				</section>
+				
+				<section style="background-color: rgb(24, 81, 81); width: max-content; height: max-content;">
+					<img src="Assests/LogoUPT.png" alt="" style="width: 200pt; margin-top: 100pt; padding-right: 800pt;">
+					<h1 style="font-size: 50pt;">Consultas Multitabla</h1>
+					<p>* Composiciones internas</p>
+					<p>* Composiciones externas</p>
+				</section>
+
+				<section>
+					<h1 style="font-size: 60pt;">Introducción</h1>
+					<p style="font-size: 30pt;">
+						Las <strong style="color: aqua;">consultas multitabla</strong>  en MySQL son una herramienta poderosa que te permite acceder y combinar datos de dos o más tablas en una sola consulta. Esto te da la flexibilidad de obtener información completa y compleja de tu base de datos, en lugar de limitarte a una sola tabla.
+					</p>
+				</section>
+<!--Composiciones internas-->
+				<section>
+					<h1 style="font-size: 60pt; color: aqua;">Composiciones internas</h1>
+					<p style="font-size: 30pt;">Las Composiciones internas son aquellas que parten de un producto cartesiano entre
+						dos tablas, es decir, la combinación de todas las filas de una tabla con las filas de la otra
+						tabla. A partir de ese producto cartesiano de tablas, se pueden hacer filtros o restricciones
+						al resultado.</p>
+				</section>
+					
+				<section>
+					<h1 style="font-size: 30pt;">SELECT … FROM tabla1 JOIN tabla2 ;</h1>
+					<p style="font-size: 20pt;">Para realizar el producto cartesiano de 2 tablas usamos el comando JOIN que puede ser
+						sustituido en MySQL por la coma(,)</p>
+					<img src="Assests/ConsultasI1.PNG" alt="" style="width: 400pt;">
+				</section>
+					
+				<section>
+					<h1 style="font-size: 30pt;">SELECT … FROM tabla1 JOIN tabla2 ON (tabla1.atributo = tabla2.atributo) ;</h1>
+					<h1 style="font-size: 30pt;">… FROM tabla1 , tabla2 ON (tabla1.atributo = tabla2.atributo) ;</h1>
+					<p style="font-size: 20pt;">Imaginemos que solo deseamos mostrar las filas donde el “id” de jugador coincida con el
+						“id” de goles, para ello deberíamos usar la restricción ON, la cual funciona muy similar a
+						la restricción WHERE ya aprendida.</p>
+					<img src="Assests/ConsultasI2.PNG" alt="" style="width: 400pt;">
+				</section>
+					
+				<section>
+					<h1 style="font-size: 30pt;">SELECT … FROM tabla1 NATURAL JOIN tabla2 ;</h1>
+					<p style="font-size: 20pt;">Además, MySQL permite simplificar la expresión anterior usando NATURAL JOIN el
+						cual automáticamente busca los atributos de ambas tablas coincidentes.</p>
+					<img src="Assests/ConsultasI3.PNG" alt="" style="width: 400pt;">
+					<p>
+						Hay que fijarse en que ahora solo aparece un campo “id” que unifica a los 2 “id” que hay en las tablas jugador y pichichi. Para poder realizar NATURAL JOIN, los campos a unificar han de llamarse igual.
+					</p>
+				</section>
+
+<!---->					
+<!--Composiciones externas-->
+				<section>
+					<h1 style="font-size: 60pt; color: aqua;">Composiciones externas</h1>
+					<p style="font-size: 30pt;">Las Composiciones externas no se originan de un producto cartesiano sino que se
+						toma un registro de una tabla y se busca registros de otra tabla que coincidan en el atributo
+						indicado.</p>
+				</section>
+					
+				<section>
+					<h1 style="font-size: 30pt;">SELECT … FROM tabla1 LEFT JOIN tabla2 ON (tabla1.atributo =
+						tabla2.atributo) ;</h1>
+					<p style="font-size: 20pt;"> <strong style="color: aqua;">LEFT JOIN</strong> hace referencia a que la consulta se hará por cada una de los registros de la
+						primera tabla. Si un registro de la primera tabla no coincide con el campo común de
+						cualquier registro de la segunda tabla, se usará NULL para los campos que no puedan ser
+						rellenados.</p>
+					<img src="Assests/ConsultasE2.PNG" alt="" style="width: 400pt;">
+				</section>
+					
+				<section>
+					<h1 style="font-size: 30pt;">SELECT … FROM tabla1 RIGHT JOIN tabla2 ON (tabla1.atributo =
+						tabla2.atributo) ;</h1>
+					<p style="font-size: 20pt;">Lo mismo ocurre con <strong style="color: aqua;">RIGHT JOIN</strong>, solo que en vez de crear el resultado recorriendo
+						cada uno de los registros de la primera tabla, se usará con los registros de la segunda.</p>
+					<img src="Assests/ConsultasE1.PNG" alt="" style="width: 400pt;">
+				</section>
+				
+				<section>
+					<h1 style="font-size: 30pt;">SELECT … FROM tabla1 NATURAL LEFT JOIN tabla2 ;</h1>
+					<p style="font-size: 20pt;">Al igual que en las composiciones internas, con NATURAL JOIN nos podemos ahorrar la
+						necesidad de indicarle a MySQL qué campo en común tienen ambas tablas.
+						Por tanto, en el ejemplo, la última sentencia de MySQL usada podría substituirse por la
+						siguiente:</p>
+					<img src="Assests/ConsultasE3.PNG" alt="" style="width: 400pt;">
+				</section>
+				
+				<section>
+					<h1 style="font-size: 30pt;">SELECT … FROM tabla1 NATURAL RIGHT JOIN tabla2 ;</h1>
+					<p style="font-size: 20pt;">Lo mismo aplica para NATURAL LEFT JOIN, solo que en vez de la segunda tabla(RIGHT)
+						se formará la consulta a partir de la primera(LEFT)</p>
+					<img src="Assests/ConsultasE4.PNG" alt="" style="width: 400pt;">
+				</section>
+<!---->
+				<section>
+					<img src="Assests/LogoUPT.png" alt="" style="width: 200pt; margin-top: 0pt; padding-right: 800pt;">
+					<h1 style="font-size: 50pt;">subconsultas</h1>
+				</section>
+
+				<section>
+					<h1 style="font-size: 60pt; color: aqua;">¿Qué es una subconsulta?</h1>
+					<p style="font-size: 30pt;"> Es una consulta dentro de otra consulta (a esta segunda la llamamos la  principal).
+					Se suelen colocar en la cláusula WHERE de la consulta principal, 
+					pero también  pueden añadirse en el SELECT o en el FROM. </p>
+				</section>
+
+				<section>
+					<h1 style="font-size: 60pt; color: aqua;">Clausula WHERE</h1>
+					<p style="font-size: 30pt;"> Para una subconsulta situada en la cláusula WHERE puede usarse 
+						los operadores de comparación (> , >=, <, <=, !=, =). 
+						Cuando esto ocurre se realiza una comparación entre el  valor indicado de la consulta principal 
+						y el valor resultante de la subconsulta. </p>
+				</section>
+
+				<section>
+					<h1 style="font-size: 60pt; color: aqua;">Comandos especiales: ANY</h1>
+					<p style="font-size: 30pt;">  Compara cada registro de la consulta principal con los de la subconsulta. 
+						Si la  comparación entre un registro de la consulta principal con otro de la subconsulta se valida, 
+						el registro de la principal pasará el filtro. </p>
+				</section>
+								
+				<section>
+					<h1 style="font-size: 60pt; color: aqua;">Comandos especiales: ALL</h1>
+					<p style="font-size: 30pt;">   en este caso un registro debe validarse para todos los registros de la subconsulta. </p>
+				</section>
+
+				<section>
+					<h1 style="font-size: 60pt; color: aqua;">Comandos especiales: IN y NOT IN</h1>
+					<p style="font-size: 30pt;">  En este caso no se usa el comparador. 
+						Se comprueba si cada registro de la consulta principal está 
+						o no contenido en la tabla resultante de la subconsulta, para NOT IN nos dice que solamente es el proceso
+						inverso de el IN es decir solamente es su opuesto.</p>
+				</section>
+				
+				<section>
+					<h1 style="font-size: 60pt; color: aqua;">EJEMPLOS</h1>
+					<p style="font-size: 30pt;">  <img src="Assests/Tablasubconsultas.png" style="width: 400" alt=""></p>
+				</section>
+					
+				<section>
+					<h1 style="font-size: 60pt; color: aqua;">EJEMPLOS</h1>
+					<p style="font-size: 30pt;">  <img src="Assests/Tablasubconsultas2.png" style="width: 400" alt=""></p>
+				</section>
+				
+			</div>
+		</div>
+
+		<script src="../../../dist/reveal.js"></script>
+		<script src="../../../plugin/notes/notes.js"></script>
+		<script src="../../../plugin/markdown/markdown.js"></script>
+		<script src="../../../plugin/highlight/highlight.js"></script>
+		<script>
+
+			Reveal.initialize({
+				hash: true,
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
